@@ -1,3 +1,7 @@
 domain: my.domain
 repo: l2c.tmax.io/l2crun-test
+resources:
+- group: l2c
+  kind: L2CRun
+  version: v1
 version: "2"

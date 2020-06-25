@@ -1,0 +1,24 @@
+# permissions for end users to edit l2cruns.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: l2crun-editor-role
+rules:
+- apiGroups:
+  - l2c.my.domain
+  resources:
+  - l2cruns
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - l2c.my.domain
+  resources:
+  - l2cruns/status
+  verbs:
+  - get
